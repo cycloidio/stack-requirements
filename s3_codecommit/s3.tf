@@ -1,5 +1,5 @@
 locals {
-  infra_iam_user_arn = "${var.infra_iam_arn == "" ? aws_iam_user.infra.arn : var.infra_iam_arn}"
+  infra_iam_user_arn = "${var.infra_iam_arn != "" ? var.infra_iam_arn : aws_iam_user.infra.arn}"
 }
 
 data "aws_iam_policy_document" "infra_access_to_s3_remote_state" {
