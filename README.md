@@ -1,5 +1,7 @@
 # stack-requirements
 
+/!\ **This stack-requirements has been mostly replaced by a [public stack](https://github.com/cycloid-community-catalog/infra-amazon-req), please refer to this one.** /!\
+
 This module aims to ease the installation of a new infrastructure by giving the possibility to
 * Create an S3 bucket for the remote state
 * Create an infra user allowed to access such bucket
