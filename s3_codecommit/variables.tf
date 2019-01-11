@@ -36,7 +36,7 @@ variable codecommit_key_public {}
 
 # To know which type the SSH key for the admin user should be fetched
 variable codecommit_key_format {
-  default = "PEM"
+  default = "SSH"
 }
 
 # Required key allowing readonly access to the repository
@@ -44,5 +44,5 @@ variable codecommit_readonly_key_public {}
 
 # To know which type the SSH key for the ro user should be fetched
 variable codecommit_readonly_key_format {
-  default = "PEM"
+  default = "SSH"
 }
