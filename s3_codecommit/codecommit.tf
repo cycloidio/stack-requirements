@@ -26,7 +26,7 @@ resource "aws_iam_user_ssh_key" "admin" {
   count = "${var.create_codecommit_repository ? 1 : 0}"
 
   username   = "${data.aws_iam_user.admin.user_name}"
-  encoding   = "PEM"
+  encoding   = "${var.codecommit_key_format}"
   public_key = "${var.codecommit_key_public}"
 }
 
@@ -45,7 +45,7 @@ resource "aws_iam_user_ssh_key" "codecommit_readonly" {
   count = "${var.create_codecommit_repository ? 1 : 0}"
 
   username   = "${aws_iam_user.codecommit_readonly.name}"
-  encoding   = "PEM"
+  encoding   = "${var.codecommit_readonly_key_format}"
   public_key = "${var.codecommit_readonly_key_public}"
 }
 

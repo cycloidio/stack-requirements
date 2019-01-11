@@ -5,7 +5,9 @@ module "s3_codecommit" {
   create_s3_bucket               = "1"
   create_infra_user              = "1"
   customer                       = "r2d2"
+  codecommit_readonly_key_format = "SSH"
   codecommit_readonly_key_public = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQA...3s+KslkalkI198auyP r2d2"
+  codecommit_key_format          = "SSH"
   codecommit_key_public          = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQA...90T3s+YwdVVqNzsauyP r2d2"
 
   # extra possible variables
